@@ -1,0 +1,10 @@
+contraint digunakan untuk menjaga data tetap aman
+index digunakan untuk pencarian data cepat
+
+contraint ataupun primary key didalamnya sudah ternam index
+jadi index di mysql adalah sebuah algoritama yang mempercepat pencarian data 
+dikarenakan menggunakan algoritma b-tree atau pohon
+
+
+
+MATERI RELASI ONE TO ONE

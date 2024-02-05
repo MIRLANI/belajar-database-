@@ -1,0 +1,45 @@
+@startuml
+
+
+entity Users{
+    *id verchar(200) <<PR>>
+    --
+    *name verchar(200)
+}
+
+entity Nontification{
+    *id int auto increment <<PR>>
+    --
+    *title verchar(200)
+    *detail text
+    *create_at timestamp
+    --
+    user_id verchar (200) <<FK>>
+}
+
+entity Catagory{
+    *id verchar (200)
+    --
+    *name verchar(200)
+}
+
+
+entity NontificationRed{
+    *id int auto increment <<PK>>
+    --
+    *is_read boolean 
+    --
+    *nontification_id int <<FK>>
+    *user_id verchar(200) <<FK>>
+}
+
+
+Users ||--o{ Nontification
+Catagory ||--o{ Nontification 
+Nontification ||--o{ NontificationRed
+Users ||--o{ NontificationRed
+
+
+
+
+@enduml
